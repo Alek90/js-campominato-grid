@@ -18,3 +18,5 @@
 /* La griglia ha le celle numerate, e deve possedere un evento interno:
     Quando l'utente "clicca" su una cella, avvia l'evento che permette alla cella di assumere un colore predefinito (azzurro).
 */
+
+
