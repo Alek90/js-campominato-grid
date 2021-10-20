@@ -7,7 +7,7 @@
 
 /* Proprietà fisse */
 
-#grid_game{
+#grid_container{
     display: flex;
     flex-wrap: wrap;
 }
@@ -62,3 +62,6 @@
     height: calc(100% / 7);
 }
 
+.selected_cell{
+    background-color: darkcyan;
+}

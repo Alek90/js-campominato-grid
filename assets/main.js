@@ -25,8 +25,12 @@ const startButton = document.getElementById("start");
 // Costruiamo l'evento/azione.
 startButton.addEventListener("click", function(){
 
-    //Inizializziamo delle variabili che ci serviranno più avanti:
-    let grid = document.getElementById("grid_game");
+    //Inizializziamo delle variabili che ci serviranno successivamente:
+
+    //-prendiamo il contenitore griglia:
+    let grid = document.getElementById("grid_container");
+
+    //inizializziamo una variabile per le celle:
     let cell = "";
 
 
@@ -34,7 +38,10 @@ startButton.addEventListener("click", function(){
     let difficultLevel = document.getElementById("choice_difficult").value;
     console.log(difficultLevel);
 
-    //Assegnamo un valore numerico alla selezione dell'utente:
+    /* Utilizziamo le condizionali per:
+        -assegnare una classe che differenzi le proprietà relative della griglia;
+        -assegnare un valore numerico alla selezione dell'utente;
+    */
     let intensityLevel = "";
 
     if(difficultLevel == "easy"){
@@ -50,23 +57,32 @@ startButton.addEventListener("click", function(){
 
     console.log(intensityLevel);
 
+
     // Tramite un ciclo costruiamo la griglia relativa alla difficoltà selezionata:
-
-
-    console.log(grid);
 
     for(let i = 1; i <= intensityLevel; i++){
 
+        //creiamo un elemento numerato:
         let cellNumber = document.createElement("p")
         cellNumber.innerHTML = [i];
 
+        //creiamo un elemento nelle celle:
         let cell = document.createElement("div")
         cell.className = "grid_cell"
         
+        //numeriamo le celle (appendiamo l'elemento numerato nelle celle):
         cell.append(cellNumber);
 
+        //diamo corpo alla griglia (appendendo le celle nel contenitore griglia):
         grid.append(cell);
-        console.log(grid, cell);
+
+        //Creare evento alla selezione di una cella:
+        cell.addEventListener("click", function(){
+            this.classList.add("selected_cell")
+            console.log(this);
+        })
+
     }
+        
     
 })
