@@ -5,11 +5,23 @@
 }
 
 
+/* Proprietà fisse */
 
 #grid_game{
     display: flex;
     flex-wrap: wrap;
 }
+
+.grid_cell{
+    border: 2px solid whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/* Proprietà relative alla difficoltà facile */
 
 .easy_grid{
     width: 1000px;
@@ -17,30 +29,32 @@
     background-color: greenyellow;
 }
 
+.easy_grid .grid_cell{
+    width: calc(100% / 10);
+    height: calc(100% / 10);
+}
+
+
+/* Proprietà relative alla difficoltà normale */
+
 .normal_grid{
     width: 990px;
     height: 990px;
     background-color: yellow;
 }
 
+.normal_grid .grid_cell{
+    width: calc(100% / 9);
+    height: calc(100% / 9);
+}
+
+
+/* Proprietà relative alla difficoltà difficile */
+
 .hard_grid{
     width: 980px;
     height: 980px;
     background-color: orangered;
-}
-
-.grid_cell{
-    border: 2px solid whitesmoke;
-}
-
-.easy_grid .grid_cell{
-    width: calc(100% / 10);
-    height: calc(100% / 10);
-}
-
-.normal_grid .grid_cell{
-    width: calc(100% / 9);
-    height: calc(100% / 9);
 }
 
 .hard_grid .grid_cell{
