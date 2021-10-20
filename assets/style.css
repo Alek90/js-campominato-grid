@@ -1,0 +1,50 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+#grid_game{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.easy_grid{
+    width: 1000px;
+    height: 1000px;
+    background-color: greenyellow;
+}
+
+.normal_grid{
+    width: 990px;
+    height: 990px;
+    background-color: yellow;
+}
+
+.hard_grid{
+    width: 980px;
+    height: 980px;
+    background-color: orangered;
+}
+
+.grid_cell{
+    border: 2px solid whitesmoke;
+}
+
+.easy_grid .grid_cell{
+    width: calc(100% / 10);
+    height: calc(100% / 10);
+}
+
+.normal_grid .grid_cell{
+    width: calc(100% / 9);
+    height: calc(100% / 9);
+}
+
+.hard_grid .grid_cell{
+    width: calc(100% / 7);
+    height: calc(100% / 7);
+}
+

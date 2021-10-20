@@ -25,20 +25,48 @@ const startButton = document.getElementById("start");
 // Costruiamo l'evento/azione.
 startButton.addEventListener("click", function(){
 
+    //Inizializziamo delle variabili che ci serviranno più avanti:
+    let grid = document.getElementById("grid_game");
+    let cell = "";
+
+
     //Prendiamo in considerazione le selezioni dell'utente:
     let difficultLevel = document.getElementById("choice_difficult").value;
     console.log(difficultLevel);
+
     //Assegnamo un valore numerico alla selezione dell'utente:
     let intensityLevel = "";
 
     if(difficultLevel == "easy"){
         intensityLevel = 100;
+        grid.className = "easy_grid";
     }else if(difficultLevel =="normal"){
         intensityLevel = 81;
+        grid.className = "normal_grid";
     }else {
         intensityLevel = 49;
+        grid.className = "hard_grid";
     }
 
     console.log(intensityLevel);
+
+    // Tramite un ciclo costruiamo la griglia relativa alla difficoltà selezionata:
+
+
+    console.log(grid);
+
+    for(let i = 1; i <= intensityLevel; i++){
+
+        let cellNumber = document.createElement("p")
+        cellNumber.innerHTML = [i];
+
+        let cell = document.createElement("div")
+        cell.className = "grid_cell"
+        
+        cell.append(cellNumber);
+
+        grid.append(cell);
+        console.log(grid, cell);
+    }
     
 })
