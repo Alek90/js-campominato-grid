@@ -19,4 +19,26 @@
     Quando l'utente "clicca" su una cella, avvia l'evento che permette alla cella di assumere un colore predefinito (azzurro).
 */
 
+// Prendiamo il bottone.
+const startButton = document.getElementById("start");
 
+// Costruiamo l'evento/azione.
+startButton.addEventListener("click", function(){
+
+    //Prendiamo in considerazione le selezioni dell'utente:
+    let difficultLevel = document.getElementById("choice_difficult").value;
+    console.log(difficultLevel);
+    //Assegnamo un valore numerico alla selezione dell'utente:
+    let intensityLevel = "";
+
+    if(difficultLevel == "easy"){
+        intensityLevel = 100;
+    }else if(difficultLevel =="normal"){
+        intensityLevel = 81;
+    }else {
+        intensityLevel = 49;
+    }
+
+    console.log(intensityLevel);
+    
+})
