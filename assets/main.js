@@ -25,6 +25,9 @@ const startButton = document.getElementById("start");
 // Costruiamo l'evento/azione.
 startButton.addEventListener("click", function(){
 
+
+    
+    
     //Inizializziamo delle variabili che ci serviranno successivamente:
 
     //-prendiamo il contenitore griglia:
@@ -32,6 +35,7 @@ startButton.addEventListener("click", function(){
 
     //inizializziamo una variabile per le celle:
     let cell = "";
+    cell.classList = "";
 
 
     //Prendiamo in considerazione le selezioni dell'utente:
@@ -68,7 +72,7 @@ startButton.addEventListener("click", function(){
 
         //creiamo un elemento nelle celle:
         let cell = document.createElement("div")
-        cell.className = "grid_cell"
+        cell.className = "grid_cell";
         
         //numeriamo le celle (appendiamo l'elemento numerato nelle celle):
         cell.append(cellNumber);
@@ -78,10 +82,12 @@ startButton.addEventListener("click", function(){
 
         //Creare evento alla selezione di una cella:
         cell.addEventListener("click", function(){
-            this.classList.add("selected_cell")
+            this.className = "selected_cell";
+            //this.style.backgroundColor = "lightblue"
             console.log(this);
         })
 
+        
     }
         
     

@@ -29,7 +29,7 @@
     background-color: greenyellow;
 }
 
-.easy_grid .grid_cell{
+.easy_grid > div{
     width: calc(100% / 10);
     height: calc(100% / 10);
 }
@@ -43,9 +43,10 @@
     background-color: yellow;
 }
 
-.normal_grid .grid_cell{
+.normal_grid > div{
     width: calc(100% / 9);
     height: calc(100% / 9);
+    background-color: yellow;
 }
 
 
@@ -57,11 +58,15 @@
     background-color: orangered;
 }
 
-.hard_grid .grid_cell{
+.hard_grid > div{
     width: calc(100% / 7);
     height: calc(100% / 7);
 }
 
 .selected_cell{
-    background-color: darkcyan;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
 }
